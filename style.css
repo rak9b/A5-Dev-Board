@@ -1,0 +1,10 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: rgb(244, 247, 255);
+}
+.bg-primary{
+    background:rgb(244, 247, 255);
+}
+.bg-secondary{
+    background: linear-gradient(130.70deg, rgb(55, 82, 253) 0.419%,rgb(108, 127, 250) 52.66%,rgb(155, 168, 248) 99.733%);
+}

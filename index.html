@@ -1,0 +1,251 @@
+
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevTaskBoard</title>
+    <!-- DaisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+</head>
+<body class="m-0 p-0">
+   
+        <section>
+            <div class="container mx-auto">
+                <!-- Nav -->
+                <div class="flex justify-between items-center p-5 rounded-xl bg-white shadow-sm">
+                    <!-- Left Side: Logo and Title -->
+                    <div class="nav flex items-center gap-2">
+                        <img class="w-7" src="./assets/logo.png" alt="Logo">
+                        <h1 class="text-xl">
+                            <span class="font-light">Dev</span><span class="font-bold">Board</span>
+                        </h1>
+                    </div>
+            
+                    <!-- Right Side: Checkbox and Theme Button -->
+                    <div class="flex items-center gap-6">
+                        <div class="flex items-center gap-3">
+                            <img class="w-5" src="./assets/checkbox.png" alt="Checkbox">
+                            <h1 id="task-completed" class="font-bold text-">23</h1>
+                        </div>
+                        <div>
+                            <button id="theme-btn"><img class="w-7" src="./assets/theme-btn.png" alt="Theme Button"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+       
+        <div class="flex gap-4 container mx-auto rounded">
+                <!-- Task List -->
+             <section class="bg-white grid grid-cols-3 mt-3 gap-5">
+                <div class="col-span-3">
+                    <div class="grid grid-cols-4 gap-4 p-4">
+                        <div class="bg-primary shadow-md col-span-1 rounded-2xl  flex items-center justify-center ">
+                            <div class="flex gap-4 items-center p-4 ">
+                                <div class="rounded-full bg-white p-2 inline-flex">
+                                    <img class="w-5" src="./assets/checkbox.png" alt="">
+                                </div>
+                                
+                                <div class="">
+                                    <h1 class="text-xs">Task Assigned</h1>
+                                    <h1 id="task" class="font-bold text-xl">06</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-secondary col-span-2 rounded-2xl  flex items-center justify-center ">
+                            <div class="flex gap-3 items-center p-4 ">
+                                <img src="./assets/board.png" alt="">
+                                <div class="text-white">
+                                    <h1>Discover Something</h1>
+                                    <h1> New Today!</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-primary shadow-md  col-span-1 rounded-2xl  flex items-center justify-center ">
+                            <div class="flex gap-2 items-center p-6">
+                                <div class="rounded-full bg-white p-2 inline-flex">
+                                    <img class="w-5" src="./assets/calender.png" alt="">
+                                </div>
+                                <div class="">
+                                    <h1 id="todayDate" class="text-sm"></h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-3">
+                        <div class="p-4 bg-primary m-3 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+
+                            <div class="rounded-md w-2/4 p-2 bg-white mb-3">
+                                <h1 class="text-lg font-semibold text-gray-600">Shop Ease</h1>
+                            </div>
+                    
+                            
+                            <h1 id="title-1" class="font-bold  text-gray-800 mb-2">Fix Mobile Button Issue</h1>
+                    
+                            
+                            <div class="bg-white p-3 rounded-md mb-3">
+                                <p class="text-xs text-gray-500 leading-5">
+                                    Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly.
+                                </p>
+                            </div>
+                    
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <p class="text-sm font-light text-gray-600">Deadline</p>
+                                    <p class="text-sm font-medium text-gray-800">21 March 2025</p>
+                                </div>
+                                <button id="first-task" class="btn btn-sm btn-primary text-white">
+                                    Completed
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p-4 bg-primary m-3 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+
+                            <div class="rounded-md w-2/4 p-2 bg-white mb-3">
+                                <h1 class="text-lg font-semibold text-gray-600">CloudSync</h1>
+                            </div>
+                    
+                            
+                            <h1 id="title-2" class="font-bold  text-gray-800 mb-2">Add Dark Mode</h1>
+                    
+                            
+                            <div class="bg-white p-3 rounded-md mb-3">
+                                <p class="text-xs text-gray-500 leading-5">
+                                    Store the user's preference in localStorage, update CSS variables dynamically, and apply a smooth transition effect.
+                                </p>
+                            </div>
+                    
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <p class="text-sm font-light text-gray-600">Deadline</p>
+                                    <p class="text-sm font-medium text-gray-800">21 March 2025</p>
+                                </div>
+                                <button id="second-task" class="btn btn-sm btn-primary text-white">
+                                    Completed
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p-4 bg-primary m-3 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+
+                            <div class="rounded-md w-2/4 p-2 bg-white mb-3">
+                                <h1 class="text-lg font-semibold text-gray-600">Soft Pay</h1>
+                            </div>
+                    
+                            
+                            <h1 id="title-3" class="font-bold  text-gray-800 mb-2">Add Pay Success Modal</h1>
+                    
+                            
+                            <div class="bg-white p-3 rounded-md mb-3">
+                                <p class="text-xs text-gray-500 leading-5">
+                                    A card component has figure,a body part,and inside body there are title and actions parts
+                                </p>
+                            </div>
+                    
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <p class="text-sm font-light text-gray-600">Deadline</p>
+                                    <p class="text-sm font-medium text-gray-800">22 March 2025</p>
+                                </div>
+                                <button id="third-task" class="btn btn-sm btn-primary text-white">
+                                    Completed
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p-4 bg-primary m-3 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                            <div class="rounded-md w-2/4 p-2 bg-white mb-3">
+                                <h1 class="text-lg font-semibold text-gray-600">Task Manager</h1>
+                            </div>
+                            <h1 id="title-4" class="font-bold text-gray-800 mb-2">Optimize Database Queries</h1>
+                            <div class="bg-white p-3 rounded-md mb-3">
+                                <p class="text-xs text-gray-500 leading-5">
+                                    Analyze slow queries, add indexing, and optimize SQL statements for better performance.
+                                </p>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <p class="text-sm font-light text-gray-600">Deadline</p>
+                                    <p class="text-sm font-medium text-gray-800">23 March 2025</p>
+                                </div>
+                                <button id="fourth-task" class="btn btn-sm btn-primary text-white">Completed</button>
+                            </div>
+                        </div>
+                        
+                        <div class="p-4 bg-primary m-3 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                            <div class="rounded-md w-2/4 p-2 bg-white mb-3">
+                                <h1 class="text-lg font-semibold text-gray-600">UI Kit</h1>
+                            </div>
+                            <h1 id="title-5" class="font-bold text-gray-800 mb-2">Refactor Button Components</h1>
+                            <div class="bg-white p-3 rounded-md mb-3">
+                                <p class="text-xs text-gray-500 leading-5">
+                                    Standardize button styles, improve accessibility, and ensure consistency across the application.
+                                </p>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <p class="text-sm font-light text-gray-600">Deadline</p>
+                                    <p class="text-sm font-medium text-gray-800">24 March 2025</p>
+                                </div>
+                                <button id="fifth-task" class="btn btn-sm btn-primary text-white disabled">Completed</button>
+                            </div>
+                        </div>
+                        
+                        <div class="p-4 bg-primary m-3 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                            <div class="rounded-md w-2/4 p-2 bg-white mb-3">
+                                <h1 class="text-lg font-semibold text-gray-600">Analytics</h1>
+                            </div>
+                            <h1 id="title-6" class="font-bold text-gray-800 mb-2">Implement User Tracking</h1>
+                            <div class="bg-white p-3 rounded-md mb-3">
+                                <p class="text-xs text-gray-500 leading-5">
+                                    Add Google Analytics, track key metrics, and generate detailed reports for user engagement.
+                                </p>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <p class="text-sm font-light text-gray-600">Deadline</p>
+                                    <p class="text-sm font-medium text-gray-800">25 March 2025</p>
+                                </div>
+                                <button id="sixth-task" class="btn btn-sm btn-primary text-white">Completed</button>
+                            </div>
+                        </div>
+                            
+                    </div>
+
+                </div>                   
+             </section>
+             <!-- Right History -->
+            <aside id="his" class="w-2/4 bg-white shadow-xl rounded-xl p-4 mt-3">
+            
+                <div  class="flex justify-center items-center mt-5 gap-3">
+                    <img class="w-5" src="./assets/activity.png" alt="">
+                    <h1 class="font-semibold text-lg text-gray-800">Activity Log</h1>
+                </div>
+
+            
+                <div class="flex justify-center mt-4">
+                    <button id="clear-history" class="btn btn-primary text-white font-semibold hover:bg-blue-700 transition-colors duration-300">
+                        Clear History
+                    </button>
+                    
+                </div>
+
+                <div id="history">
+
+                </div>
+                
+            </aside>
+            </div>
+    
+    
+        
+   
+    <script src="./app.js"></script>
+</body>
+</html>
