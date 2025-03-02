@@ -45,7 +45,7 @@ function taskCompleted(taskId,title)
             taskDiv.classList.add("mb-4","bg-gray-50","p-3","rounded-lg");
             const p1 = document.createElement("p");
             p1.classList.add("text-sm", "text-gray-600"); 
-            p1.innerText = `You have completed the task ${taskTitle}`;
+            p1.innerHTML = `You have completed the task <b>${taskTitle}</b>`;
 
             const p2 = document.createElement("p");
             p2.classList.add("text-xs", "text-gray-400", "mt-1"); 
@@ -84,3 +84,12 @@ document.getElementById("theme-btn").addEventListener("click",
 )
 
 document.getElementById('todayDate').textContent = new Date().toDateString();
+
+
+
+document.getElementById('discover').addEventListener('click',
+    function(event){
+        event.preventDefault();
+        window.location.href = "question.html";
+    }
+)
